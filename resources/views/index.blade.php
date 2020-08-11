@@ -1,6 +1,7 @@
 @extends('layout')
 
 @section('contenido')
+<!-- Esta vista se encarga de listar todos los usuarios dados de alta en la base de datos -->
 <div class="row">
     <div class="col-md-12 text-center mb-5">
         <h1>Read + Update + Delete</h1>
@@ -22,6 +23,7 @@
                 <th scope="col">ACCIONES</th>
             </thead>
             <tbody>
+                <!-- Aquí itero sobre el array $usuarios que el controlador pasó a la vista -->
                 @foreach ($usuarios as $usuario)
                 <tr>
                     <td>{{ $usuario->id }}</td>

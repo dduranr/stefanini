@@ -1,6 +1,7 @@
 @extends('layout')
 
 @section('contenido')
+<!-- Esta vsita se encarga de mostrar la info del usuario seleccionado -->
 <div class="row">
     <div class="col-md-12 text-center">
         <h1>Visualizando usuario {{ $usuario->id }}</h1>

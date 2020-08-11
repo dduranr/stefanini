@@ -1,3 +1,4 @@
+<!-- Este es el layout general que sirve de base a todas las vistas -->
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 

@@ -17,5 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+// Aquí declaro las rutas (Laravel tiene la opción de generarlas todas de una vez, utilizando el método resource de la clase Route, así sólo utilizamos una sola línea)
 Route::resource('usuarios', 'UsuariosController');

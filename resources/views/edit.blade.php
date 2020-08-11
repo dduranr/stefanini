@@ -1,6 +1,7 @@
 @extends('layout')
 
 @section('contenido')
+<!-- Esta vista corresponde con el formulario para editar al usuario seleccionado -->
 <div class="row">
     <div class="col-md-12 text-center">
         <h1>UPDATE</h1>
@@ -8,7 +9,7 @@
     </div>
 
     <div class="col-md-12">
-        {{-- El objeto $errors lo genera por default Laravel. Si hay errores de algún tipo (por ejemplo de validación), simplemente hay que buscarlos ahí  --}}
+        <!-- Esto se encarga de mostrar errores de validación -->
         @if($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -19,6 +20,7 @@
         </div>
         @endif
 
+        <!-- Esto se encarga de mostrar el mensaje de éxito en caso que se haya generado correctamente el usuario -->
         @if(session('msg_success'))
         <div class="alert alert-success">
             {{ session('msg_success') }}
@@ -27,6 +29,7 @@
     </div>
 
     <div class="col-md-6 mx-auto">
+        <!-- Aquí va el formulario propiamente, el cual apunta a la ruta encargada de actualizar al usuario en cuestión. Cada campo tiene como value el dato proveniente de la base de datos -->
         <form action="{{ route('usuarios.update', $usuario->id) }}" method="POST">
             @csrf
             @method('PUT')
